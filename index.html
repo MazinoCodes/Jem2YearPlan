@@ -173,12 +173,12 @@
     const dim = document.getElementById("dim");
 
   //image dimensions
-    image.addEventListener('load', function() {
-        const { naturalWidth, naturalHeight, width, height } = image;
-        dim.textContent = 
-`Natural size: ${naturalWidth} x ${naturalHeight} pixels
-Displayed size: ${width} x ${height} pixels`
-    });
+  image.addEventListener('load', function() {
+    const { naturalWidth, naturalHeight, width, height } = image;
+    dim.innerHTML = 
+       ` Natural size: ${naturalWidth} x ${naturalHeight} pixels
+Displayed size: ${width} x ${height} pixels;`
+});
 //UTC date and time
     const now = new Date();
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
