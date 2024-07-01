@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom right, #4062bb ,  #5200ae );
+    color: #fff;
+}
+
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+}
+
+.left-side {
+    width: 400px;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+}
+
+.left-side p {
+    font-size: 1rem;
+   
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.links {
+   
+}
+
+.links a {
+    text-align: center;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+img{
+    border-radius: 10px;
+}
+.right-side {
+    flex: 1;
+    padding: 40px;
+    margin-left: 400px; /* Adjusted to match the width of the left-side */
+    overflow-y: auto; 
+}
+
+.topic {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.event {
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.event:hover {
+    transform: scale(1.02);
+}
+
+.event.left {
+    text-align: right;
+}
+
+.event.right {
+    text-align: left;
+}
+
+.content {
+    transition: max-height 0.3s ease-in-out;
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.event:hover .details {
+    max-height: 200px;
+}
+
+
+
+@media(max-width:1024px){
+    
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.left-side {
+    width: 100vw;
+    position: static;
+    height:fit-content ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.left-side h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-side p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.links a {
+    display: block;
+    text-decoration: none;
+    margin: 0px 0;
+    padding: 10px 20px;
+}
+
+
+.links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.right-side {
+    flex: 1;
+    width: 100%;
+    padding: 40px;
+    margin-left: 0px; /* Adjusted to match the width of the left-side */
+}
+
+.topic {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+}
